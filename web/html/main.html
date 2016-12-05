@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Photoviewer</title>
+    <link rel="stylesheet" type="text/css" href="../css/components/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main/_main.css">
+    <script src="../js/components/jquery.js" charset="utf-8"></script>
+    <script src="../js/components/uploadPost.js" charset="utf-8"></script>
+    <script src="../js/components/loadData.js" charset="utf-8"></script>
+    <script src="../js/components/cardUser.js" charset="utf-8"></script>
+    <!--script src="../js/components/header.js" charset="utf-8"></script-->
+  </head>
+  <body>
+    <div class="header">
+      <div class="mediaContainer">
+        <div class="image">
+          <img src="../images/logo.png" alt="">
+        </div>
+        <div class="text">
+          <h1>Photoviewer</h1>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="leftContent">
+        <div class="userProfile">
+          <div class="mediaContainer">
+            <div class="imageCover">
+              <img src="../images/cover.jpg" alt="">
+            </div>
+            <div class="imageProfile">
+              <img src="../images/profile.jpg" alt="">
+            </div>
+            <div class="text">
+              <div class="fullname">
+                <h1>Gerardo Soriano</h1>
+              </div>
+              <div class="username">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="uploadPhoto">
+          <div class="mediaContainer">
+            <div class="displayForm">
+              <input type="button" name="UploadPhoto" value="Subir foto">
+            </div>
+            <div class="form">
+                <form action="index.html" method="post" enctype="multipart/form-data" id="formUploadPhoto">
+                <fieldset>
+                  <textarea name="description" class="contentUploaded" rows="5" maxlength="255" placeholder="Escribe una descripción"></textarea>
+                  <label for="photo"><span class="fa fa-camera"></span></label>
+                  <input type="file" class="contentUploaded" name="photo" id="photo">
+                  <input type="button" value="Cancelar">
+                  <input type="submit" value="Subir">
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightContent">
+        <div class="contentPictures">
+          <div class="imageCard">
+            <div class="mediaContainer">
+              <div class="user">
+                <div class="imageProfile">
+                  <img src="../images/profile.jpg" alt="">
+                </div>
+                <div class="username">
+                  <h1>gerardosoriano97</h1>
+                </div>
+              </div>
+              <div class="icons">
+                <ul>
+                  <li><span class="fa fa-heart"></span></li>
+                  <li><span class="fa fa-comments"></span></li>
+                  <li><span class="fa fa-share-alt"></span></li>
+                  <li><span class="fa fa-ellipsis-h"></span></li>
+                </ul>
+              </div>
+              <div class="image">
+                <img src="../images/post.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="imageCard">
+            <div class="mediaContainer">
+              <div class="user">
+                <div class="imageProfile">
+                  <img src="../images/profile.jpg" alt="">
+                </div>
+                <div class="username">
+                  <h1>gerardosoriano97</h1>
+                </div>
+              </div>
+              <div class="icons">
+                <ul>
+                  <li><span class="fa fa-heart"></span></li>
+                  <li><span class="fa fa-comments"></span></li>
+                  <li><span class="fa fa-share-alt"></span></li>
+                  <li><span class="fa fa-ellipsis-h"></span></li>
+                </ul>
+              </div>
+              <div class="image">
+                <img src="../images/post.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="imageCard">
+            <div class="mediaContainer">
+              <div class="user">
+                <div class="imageProfile">
+                  <img src="../images/profile.jpg" alt="">
+                </div>
+                <div class="username">
+                  <h1>gerardosoriano97</h1>
+                </div>
+              </div>
+              <div class="icons">
+                <ul>
+                  <li><span class="fa fa-heart"></span></li>
+                  <li><span class="fa fa-comments"></span></li>
+                  <li><span class="fa fa-share-alt"></span></li>
+                  <li><span class="fa fa-ellipsis-h"></span></li>
+                </ul>
+              </div>
+              <div class="image">
+                <img src="../images/post.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rightBar">
+      <div class="mediaContainer">
+        <div class="icons">
+          <ul>
+            <li><span class="fa fa-globe"></span></li>
+            <li><span class="fa fa-search"></span></li>
+            <li><span class="fa fa-user"></span></li>
+            <li><span class="fa fa-cog"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

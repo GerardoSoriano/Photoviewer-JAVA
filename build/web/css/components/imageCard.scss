@@ -1,0 +1,88 @@
+.imageCard{
+  @extend .default_values;
+  max-width: 100%;
+  height: 400px;
+  max-height: 400px;
+  overflow: hidden;
+  padding-top: 6px;
+  margin-bottom: 10px;
+  .mediaContainer{
+    @extend .default_values;
+    background-color: white;
+    border: 2px solid #e3e3e3;
+    border-radius: 5px;
+    padding: 5px;
+    .user{
+      width: 100%;
+      height: 20%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      position: relative;
+      .imageProfile{
+        width: 75px;
+        height: 75px;
+        overflow: hidden;
+        border: 2px solid white;
+        border-radius: 50%;
+        img{
+          width: auto;
+          height: auto;
+          max-width: 100%;
+        }
+      }
+      .username{
+        width: auto;
+        h1{
+          font-family: _Josefin_Sans_;
+          font-size: 20px;
+          margin: 0;
+        }
+      }
+    }
+    .icons{
+      width: 20%;
+      height: 80%;
+      display: inline-block;
+      float: left;
+      text-align: center;
+      ul{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        li{
+          list-style: none;
+          width: 100%;
+          height: 25%;
+          display: table;
+          span{
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 30px;
+            color: #333;
+            &:hover{
+              color: #555;
+            }
+          }
+        }
+      }
+    }
+    .image{
+      width: 80%;
+      height: 80%;
+      display: inline-block;
+      float: left;
+      overflow: hidden;
+      text-align: center;
+      background-color: #f3f3f3;
+      border: 2px solid #e3e3e3;
+      border-radius: 5px;
+      img{
+        width: auto;
+        height: auto;
+        min-height: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}

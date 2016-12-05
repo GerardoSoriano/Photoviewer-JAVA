@@ -1,0 +1,46 @@
+body{
+  margin: 0;
+  background-color: #f3f3f3;
+  display: flex;
+  &#background_image{
+    background-image: url("../../images/viewMaster_bg.jpg");
+    background-size: cover;
+  }
+  *{
+    box-sizing: border-box;
+    transition: border-color 2s, height 2s;
+  }
+}
+
+.default_values{
+  width: 100%;
+  height: 100%;
+  float: none;
+  position: relative;
+}
+
+input.error{
+  border-color: red !important;
+}
+
+.content{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  .leftContent{
+    width: 400px;
+    min-width: 400px;
+    max-width: 400px;
+    height: auto;
+    float: left;
+    padding: 10px;
+  }
+  .rightContent{
+    width: 600px;
+    min-width: 600px;
+    max-width: 600px;
+    height: auto;
+    float: left;
+    padding: 10px;
+  }
+}

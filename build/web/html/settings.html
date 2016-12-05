@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Configuracion de Photoviewer</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/settings_style.css">
+	<link rel="stylesheet" type="text/css" href="../css/notification.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	
+	<script type="text/javascript" src="../js/settings.js"></script>
+	<script type="text/javascript" src="../js/notification.js"></script>
+
+	<script type="text/javascript" src="../js/right_column_script.js"></script>
+
+</head>
+<body>
+
+		<div class="headContainer">
+			<div class="cont">
+				<div id="logo"><img src="../images/Logo_prov.png" height="50" width="50"></div>
+				<div id="pageTitle"><h2 id="titl">Photoviewer</h2></div>
+			</div>
+		</div>
+	<!--					HEADER					-->
+	<!--
+		<div class="headContainer">
+			<div class="cont">
+				<div id="logo"><img src="../images/Logo_prov.png" height="50" width="50"></div>
+				<div id="pageTitle"><h2 id="titl">Photoviewer</h2></div>
+			</div>
+		</div>
+	-->
+	<!--					HEADER					-->
+		<div class="containerContent">
+		<div class="cardUser">
+					<!--Aqui ira el link hacia el perfil del man-->
+					<a class="coverProfileCard" href=""></a>
+					<div class="cardUserInformation">
+						<a href= "https://www.google.com" class="avatarContainerCard">
+							<img src="../images/ppmini_ejemplo.jpg" class="avatar">	
+						</a>
+						<div class="cardUserFields">
+							<div class="cardUserfullname">
+								<a class="cardText" href=""> Roberto Villegas Rodriguez </a>
+							</div>
+							<div class="cardUsername">
+								<a class="cardText" href=""> RV_user </a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<div class="container">
+                            <form action="/Ultimate_Photoviewer/UpdateUserServlet" method="POST" enctype="multipart/form-data">
+				<div class="text">
+					Nombre							<input type="text" name="name">
+				</div>
+				<hr>
+				<div class="text">
+					Usuario							<input type="text" name="user">
+				</div>
+				<hr>
+				<div class="text">
+					<div>
+					Contaseña actual				<input type="text" name="actualpass">
+					</div>
+					<div>
+					<input type="checkbox" name="change_password" id="check_for_password"> ¿Deseas cambiar tu contraseña?
+					</div>
+					<div>
+					Contaseña nueva					<input type="text" name="newpass">
+					</div>
+					<div>
+					Confirmar nueva contraseña		<input type="text" name="confirmpass">
+					</div>
+				</div>
+				<hr>
+				<div class="upload">
+					<input type="file" class="btn_settings" id="upload_pp" title="" name="imgPortada">
+					<input type="file" class="btn_settings" id="upload_cp" title="" name="imgProfile">								
+				</div>
+				<hr>
+				<div class="text">
+				<div>
+					Pregunta de Seguridad			<select>
+													  <option value="default">Selecciona...</option>
+													  <option value="pet">¿El nombre de tu primer mascota?</option>
+													  <option value="teacher">¿El nombre de tu maestra de la escuela?</option>
+													  <option value="grandma">¿El nombre de tu abuela?</option>
+													  <option value="hospital">¿El nombre del Hospital en el que naciste?</option>
+													</select>
+					</div>
+				<div>
+					Respuesta <input type="text" name="answer">
+				</div>
+				</div>
+				<hr>
+				<div class="text">
+					Cambiar configuracion de privacidad
+					<div>
+						<input type="radio" name="gender" value="global"> Publico <br>
+	  					<input type="radio" name="gender" value="private"> Privado<br>
+	  					<input type="radio" name="gender" value="onlyme"> Solo yo
+					</div>
+				</div>
+				<div class="button">
+						<span>
+                                                    <input type="submit" class="saveChanges" value="Guardar cambios">
+						</span>
+					</div>
+				</form>
+			
+				</div>
+
+			<!-- 							BUTTONS 							-->
+			<div class="right_column"></div>
+				<div class="floatinButtons">
+					<div class="mainButtons">
+					<button class="btn_menus" id="notification_button"><img src="../images/notification.png" height="40"></button><br>
+					<button class="btn_menus" id="search_button"><img src="../images/search.png" height="40"></button><div class="search_text"><input type="search" name=""></div><br>
+					<button class="btn_menus" id="to_user_button"><img src="../images/user.png" height="40"></button><br>
+					<button class="btn_menus" id="config_button"><img src="../images/config.png" height="40"></button><br>
+				</div>	
+			
+		</div>
+		<div class="notification_window">
+		<div class="notification_container">
+			<div class="image_container">
+				<img class="image_notification" src="../images/ppmini_ejemplo.jpg">
+			</div>
+			<div class="text_notification">
+				<span class="user_notification_generator">A Roberto Villegas</span><span class="notification_desc"> le gusta tu foto.</span>
+			</div>
+		</div>	
+	</div>
+			<!-- 							BUTTONS 							-->
+</body>
+</html>

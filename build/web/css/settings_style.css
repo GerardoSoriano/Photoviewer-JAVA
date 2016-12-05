@@ -1,0 +1,240 @@
+body{	
+	margin: 0px;
+	/*background-image: url("../Untitled-1.jpg");*/
+	background-color: #f3f3f3;
+}
+html{
+	font-family: 'Open Sans', sans-serif;
+}
+div{
+	display: block;
+}
+.text input{
+	position: absolute;
+	left: 60%;
+	width: 300px;
+}
+.right_column{
+	width: 120px;
+	height: 100%;
+	background-color: rgba(51,51,51,0);
+	position: fixed;
+	right: 0;		
+	z-index: 2;
+}
+
+.text{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#upload_pp::-webkit-file-upload-button{
+	background:url(../images/camera.png) no-repeat;
+	background-size:40px;
+	background-position: 5px;
+	
+	background-color: #d75165; 
+
+	
+	height: 40px;
+	width: 50px;
+	border-width: 0;
+	border-radius: 5px;
+
+}
+#upload_cp::-webkit-file-upload-button{
+	background:url(../images/cover.png) no-repeat;
+	background-size: 40px;
+	background-color: #8cbbb1;
+	background-position: 5px;
+	
+	height: 40px;
+	width: 50px;
+	border-width: 0;
+	border-radius: 5px;
+}
+
+.saveChanges{
+	margin-top: 75px;
+	width: 100%;
+	height: 40px;
+	background-color: #f93855;
+	background: rgba(206,38,63,.8);
+	border-radius: 8px;
+	border-color: #ce263f;
+	border-width: 1px;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+.container{
+	width: 100%;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #ffffff;
+	margin-right: 100px;
+	margin-top: 80px;
+	margin-left: 10px;
+}
+
+div[class=text] div{
+margin-bottom: 15px;	
+}
+input[type=checkbox]{
+	margin-bottom: 15px;
+}
+#check_for_password{
+	left: 805px;
+	width: 13px;
+}
+hr{
+	color: #dddddd;
+}
+.mainButtons{
+	justify-content: space-between;
+}
+.mainButtons button{
+	margin-top: 75%;
+}
+.floatinButtons{
+	width: 120px;
+	height: 100%;
+	background-color: rgba(51,51,51,0);
+	position: fixed;
+	right: 0;
+	text-align: center;		
+	z-index: 2;
+}
+.floatinButtons:hover{
+	background-color: rgba(51,51,51,.8);
+}
+.btn_menus{
+	margin-top: 25px;	
+	min-height: 50px;
+	max-height: 100px;
+	border: 0px;
+	background: transparent;
+}
+.containerContent{
+	display: inline-flex;
+	max-height: 600px;
+	height: 100%;
+	width: 100%;
+	
+}
+/*							Header							*/
+/*							Header							*/
+/*							Header							*/
+/*							Header							*/
+/*							Header							*/
+@font-face{
+	font-family: "Gentleman on the Rainbow"import;
+	src:url("Gentleman on the Rainbow");
+}
+#pageTitle{
+	display:inline-flex;	
+	font-family: "Gentleman on the Rainbow";
+	font-size: 35px;
+}
+#titl{
+	margin: 0px;
+}
+#logo{
+	display: inline-flex;
+}
+.headContainer{
+	width: 100%;
+	
+	text-align: center;
+	position: fixed;
+	background-color: white;
+	z-index: 1;
+	
+}
+.cont{
+	
+	margin-right: 33%;
+	margin-left: 33%;
+
+}
+/*//////////////////////////*/
+a:visited{
+	color:#333333;
+}
+a:hover{
+	text-decoration: underline;
+}
+html, body {margin:0;padding:0;height:100%;}
+/*						_____						*/
+/*						USERCARD						*/
+.coverProfileCard{
+	background-image: url("../images/ejemplo_3.jpg");
+	background-color: #eeeeee;
+	background-size: 100%;
+	background-position: 0,50%;
+	width: 100%;
+	height: 95px;
+	display: block;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+}
+.cardUserInformation{
+	height: 100px;
+	background-color: #ffffff;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+.avatarContainerCard{	
+	margin-left: 10px;
+	display: inline-block!important;
+}
+.avatar{
+	height: 80px;
+	margin-top: -40px;	
+	border-style: solid;
+	border-radius: 50%;
+	border-color: #ffffff;
+
+}
+.cardUserFields{
+	position: absolute;
+	top: 180px;
+	left: 130px;
+	width: 200px;
+}
+.cardUserfullname{
+    
+    font-size: 20px;
+    line-height: 20px;
+    margin: 1px 0 2px 0;
+
+}
+.cardUsername{
+	font-size: 15px;
+}
+
+.cardUser{	
+	width: 530px;
+	height: 195px;
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #dddddd;
+	margin-top: 80px;
+	margin-left: 25px;
+}
+.search_text input{
+	width: 200px;
+	height: 25px;	
+	margin-left: -250px;
+
+	
+}
+.search_text{
+	margin-top: -40px;
+	display: none;
+}
+select{
+	margin-left: 250px;
+}

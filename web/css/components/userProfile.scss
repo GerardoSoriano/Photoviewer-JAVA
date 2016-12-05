@@ -1,0 +1,73 @@
+.userProfile{
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 250px;
+  min-height: 250px;
+  max-height: 250px;
+  position: relative;
+  float: left;
+  margin-bottom: 10px;
+  .mediaContainer{
+    @extend .default_values;
+    max-width: 100%;
+    max-height: 100%;
+    border: 2px solid #dddddd;
+    border-radius: 10px;
+    overflow: hidden;
+    .imageCover{
+      @extend .default_values;
+      height: 70%;
+      max-height: 70%;
+      overflow: hidden;
+      img{
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+    .imageProfile{
+      width: 100px;
+      max-width: 100px;
+      height: 100px;
+      max-height: 100px;
+      border: 2px solid white;
+      border-radius: 50%;
+      position: absolute;
+      overflow: hidden;
+      top: 50%;
+      left: 10px;
+      z-index: 1;
+      img{
+        width: auto;
+        height: auto;
+        max-width: 100%;
+      }
+    }
+    .text{
+      @extend .default_values;
+      height: 30%;
+      padding-left: 30%;
+      background-color: white;
+      .fullname{
+        @extend .default_values;
+        height: 50%;
+        h1{
+          font-family: _Josefin_Sans_;
+          font-size: 20px;
+          margin: 0;
+        }
+      }
+      .username{
+        @extend .default_values;
+        height: 50%;
+        h1{
+          font-family: _Josefin_Sans_;
+          font-size: 20px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
