@@ -15,7 +15,7 @@ body {
     box-sizing: border-box;
     transition: border-color 2s, height 2s; }
 
-.default_values, .first_screen .mediaContainer, .first_screen .mediaContainer .head, .first_screen .mediaContainer .form, .header, .header .mediaContainer, .header .mediaContainer .image, .userProfile .mediaContainer, .userProfile .mediaContainer .imageCover, .userProfile .mediaContainer .text, .userProfile .mediaContainer .text .fullname, .userProfile .mediaContainer .text .username, .uploadPhoto .mediaContainer, .uploadPhoto .mediaContainer .displayForm, .imageCard, .imageCard .mediaContainer {
+.default_values, .first_screen .mediaContainer, .first_screen .mediaContainer .head, .first_screen .mediaContainer .form, .header, .header .mediaContainer, .header .mediaContainer .image, .userProfile .mediaContainer, .userProfile .mediaContainer .imageCover, .userProfile .mediaContainer .text, .userProfile .mediaContainer .text .fullname, .userProfile .mediaContainer .text .username, .uploadPhoto .mediaContainer, .uploadPhoto .mediaContainer .displayForm, .imageCard, .imageCard .mediaContainer, .windowPopup, .windowPopupDelete, .windowPopupReport, .windowPopupEdit, .windowPopupAdminBlock {
   width: 100%;
   height: 100%;
   float: none;
@@ -118,7 +118,8 @@ input.error {
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   border: 2px solid black;
-  border-radius: 5px; }
+  border-radius: 5px;
+  z-index: 5; }
   .header .mediaContainer {
     display: flex;
     justify-content: center; }
@@ -215,37 +216,39 @@ input.error {
       height: 75px; }
       .uploadPhoto .mediaContainer .displayForm input:hover {
         background-color: rgba(250, 38, 63, 0.8); }
-  .uploadPhoto .mediaContainer .form form textarea {
-    font-family: _Josefin_Sans_;
-    width: 100%;
-    resize: none; }
-  .uploadPhoto .mediaContainer .form form label {
-    width: 100px;
-    height: 100px;
-    display: table;
-    text-align: center;
-    float: left;
-    background-color: #CCC;
-    border: 1px solid black;
-    border-radius: 5px; }
-    .uploadPhoto .mediaContainer .form form label:hover {
-      background-color: #DDD; }
-    .uploadPhoto .mediaContainer .form form label span {
-      display: table-cell;
-      vertical-align: middle; }
-  .uploadPhoto .mediaContainer .form form input {
-    font-family: _Josefin_Sans_;
-    color: white;
-    width: 80px;
-    height: 40px;
-    background-color: rgba(60, 115, 180, 0.8);
-    float: right;
-    border: 2px solid rgba(60, 115, 160, 0.8);
-    border-radius: 5px; }
-    .uploadPhoto .mediaContainer .form form input:hover {
-      background-color: rgba(60, 115, 250, 0.8); }
-    .uploadPhoto .mediaContainer .form form input[type="file"] {
-      display: none; }
+  .uploadPhoto .mediaContainer .form {
+    display: none; }
+    .uploadPhoto .mediaContainer .form form textarea {
+      font-family: _Josefin_Sans_;
+      width: 100%;
+      resize: none; }
+    .uploadPhoto .mediaContainer .form form label {
+      width: 100px;
+      height: 100px;
+      display: table;
+      text-align: center;
+      float: left;
+      background-color: #CCC;
+      border: 1px solid black;
+      border-radius: 5px; }
+      .uploadPhoto .mediaContainer .form form label:hover {
+        background-color: #DDD; }
+      .uploadPhoto .mediaContainer .form form label span {
+        display: table-cell;
+        vertical-align: middle; }
+    .uploadPhoto .mediaContainer .form form input {
+      font-family: _Josefin_Sans_;
+      color: white;
+      width: 80px;
+      height: 40px;
+      background-color: rgba(60, 115, 180, 0.8);
+      float: right;
+      border: 2px solid rgba(60, 115, 160, 0.8);
+      border-radius: 5px; }
+      .uploadPhoto .mediaContainer .form form input:hover {
+        background-color: rgba(60, 115, 250, 0.8); }
+      .uploadPhoto .mediaContainer .form form input[type="file"] {
+        display: none; }
 
 .imageCard {
   max-width: 100%;
@@ -320,37 +323,575 @@ input.error {
         min-height: 100%;
         max-height: 100%; }
 
-.rightBar {
-  width: 100px;
-  height: 100vw;
-  float: right;
-  position: fixed;
-  right: 0; }
-  .rightBar .mediaContainer {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    background-color: rgba(51, 51, 51, 0.8); }
-    .rightBar .mediaContainer .icons {
+.rightbarContainer {
+  width: 250px; }
+  .rightbarContainer .rightBar {
+    width: 100px;
+    height: 100vw;
+    float: right;
+    position: fixed;
+    right: 0; }
+    .rightbarContainer .rightBar .mediaContainer {
       width: 100%;
-      height: 100%; }
-      .rightBar .mediaContainer .icons ul {
-        margin: 0;
-        padding: 0;
+      height: 100%;
+      padding: 10px;
+      background-color: rgba(51, 51, 51, 0.8); }
+      .rightbarContainer .rightBar .mediaContainer .icons {
         width: 100%;
         height: 100%; }
-        .rightBar .mediaContainer .icons ul li {
-          list-style: none;
-          text-align: center;
-          display: table;
+        .rightbarContainer .rightBar .mediaContainer .icons ul {
+          margin: 0;
+          padding: 0;
           width: 100%;
-          height: 15vw; }
-          .rightBar .mediaContainer .icons ul li span {
-            display: table-cell;
-            vertical-align: middle;
-            color: #DDD;
-            font-size: 30px; }
-            .rightBar .mediaContainer .icons ul li span:hover {
-              color: #FFF; }
+          height: 100%; }
+          .rightbarContainer .rightBar .mediaContainer .icons ul li {
+            list-style: none;
+            text-align: center;
+            display: table;
+            width: 100%;
+            height: 15vw; }
+            .rightbarContainer .rightBar .mediaContainer .icons ul li span {
+              display: table-cell;
+              vertical-align: middle;
+              color: #DDD;
+              font-size: 30px; }
+              .rightbarContainer .rightBar .mediaContainer .icons ul li span:hover {
+                color: #FFF; }
+            .rightbarContainer .rightBar .mediaContainer .icons ul li input {
+              height: 25px;
+              margin-top: 90px;
+              width: 200px;
+              margin-left: -200px;
+              float: left; }
+
+.windowPopup {
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none; }
+  .windowPopup .mediaContainer {
+    width: 500px;
+    height: 400px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 30%;
+    top: 25%;
+    overflow: auto;
+    z-index: 10; }
+    .windowPopup .mediaContainer .buttonClose {
+      position: relative;
+      left: 475px;
+      width: 20px;
+      margin-top: 5px;
+      margin-bottom: -10px; }
+      .windowPopup .mediaContainer .buttonClose .close {
+        background-color: white;
+        border-style: none;
+        font-weight: bold;
+        color: gray; }
+    .windowPopup .mediaContainer .icons {
+      display: inline-flex;
+      width: 100%;
+      padding-bottom: 10px;
+      font-size: 8px; }
+      .windowPopup .mediaContainer .icons .likes {
+        display: inline-flex; }
+        .windowPopup .mediaContainer .icons .likes h1 {
+          margin: 0; }
+        .windowPopup .mediaContainer .icons .likes span {
+          width: 18px;
+          height: 18px;
+          font-size: 18px;
+          margin-left: 20px; }
+      .windowPopup .mediaContainer .icons .comments {
+        display: inline-flex; }
+        .windowPopup .mediaContainer .icons .comments h1 {
+          margin: 0; }
+        .windowPopup .mediaContainer .icons .comments span {
+          width: 18px;
+          height: 18px;
+          font-size: 18px;
+          margin-left: 20px; }
+      .windowPopup .mediaContainer .icons .shares {
+        display: inline-flex; }
+        .windowPopup .mediaContainer .icons .shares h1 {
+          margin: 0; }
+        .windowPopup .mediaContainer .icons .shares span {
+          width: 18px;
+          height: 18px;
+          font-size: 18px;
+          margin-left: 20px; }
+    .windowPopup .mediaContainer .user {
+      width: auto; }
+      .windowPopup .mediaContainer .user .addComment {
+        display: inline-flex; }
+        .windowPopup .mediaContainer .user .addComment .imageProfile {
+          width: 75px;
+          height: 75px;
+          overflow: hidden;
+          border: 2px solid white;
+          border-radius: 50%; }
+          .windowPopup .mediaContainer .user .addComment .imageProfile img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            margin: 0; }
+        .windowPopup .mediaContainer .user .addComment .username {
+          width: auto; }
+          .windowPopup .mediaContainer .user .addComment .username h1 {
+            font-family: _Josefin_Sans_;
+            font-size: 15px;
+            colo: red;
+            margin: 0; }
+          .windowPopup .mediaContainer .user .addComment .username textarea {
+            width: 100%;
+            overflow: none; }
+    .windowPopup .mediaContainer .imageProfileComment {
+      width: 55px;
+      height: 55px;
+      display: inline-block;
+      float: left;
+      overflow: hidden;
+      text-align: center;
+      background-color: #f3f3f3;
+      border: 2px solid #e3e3e3;
+      border-radius: 5px; }
+      .windowPopup .mediaContainer .imageProfileComment img {
+        width: auto;
+        height: auto;
+        min-height: 100%;
+        max-height: 100%; }
+    .windowPopup .mediaContainer .userComment {
+      width: auto; }
+      .windowPopup .mediaContainer .userComment .commentPoster, .windowPopup .mediaContainer .userComment .commentCaption {
+        width: auto; }
+        .windowPopup .mediaContainer .userComment .commentPoster h1, .windowPopup .mediaContainer .userComment .commentCaption h1 {
+          font-family: _Josefin_Sans_;
+          font-size: 12   px;
+          margin: 0; }
+        .windowPopup .mediaContainer .userComment .commentPoster a, .windowPopup .mediaContainer .userComment .commentCaption a {
+          font-family: _Josefin_Sans_;
+          font-size: 18px;
+          margin: 0; }
+
+.windowPopupDelete {
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none; }
+  .windowPopupDelete .mediaContainer {
+    width: 500px;
+    height: 100px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 30%;
+    top: 25%;
+    overflow: auto;
+    z-index: 10; }
+    .windowPopupDelete .mediaContainer .buttonClose {
+      position: relative;
+      left: 475px;
+      width: 20px;
+      margin-top: 5px;
+      margin-bottom: -10px; }
+      .windowPopupDelete .mediaContainer .buttonClose .close {
+        background-color: white;
+        border-style: none;
+        font-weight: bold;
+        color: gray; }
+    .windowPopupDelete .mediaContainer .captionAlert {
+      font-family: _Josefin_Sans_;
+      font-size: 15px;
+      colo: red;
+      margin: 0; }
+    .windowPopupDelete .mediaContainer .buttonsDelete {
+      margin-top: 5px;
+      margin-left: 50px; }
+      .windowPopupDelete .mediaContainer .buttonsDelete input {
+        font-family: _Josefin_Sans_;
+        color: white;
+        width: 80px;
+        height: 40px;
+        background-color: rgba(60, 115, 180, 0.8);
+        float: right;
+        border: 2px solid rgba(60, 115, 160, 0.8);
+        border-radius: 5px; }
+        .windowPopupDelete .mediaContainer .buttonsDelete input:hover {
+          background-color: rgba(60, 115, 250, 0.8); }
+
+.windowPopupReport {
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none; }
+  .windowPopupReport .mediaContainer {
+    width: 500px;
+    height: 100px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 30%;
+    top: 25%;
+    overflow: auto;
+    z-index: 10; }
+    .windowPopupReport .mediaContainer .buttonClose {
+      position: relative;
+      left: 475px;
+      width: 20px;
+      margin-top: 5px;
+      margin-bottom: -10px; }
+      .windowPopupReport .mediaContainer .buttonClose .close {
+        background-color: white;
+        border-style: none;
+        font-weight: bold;
+        color: gray; }
+    .windowPopupReport .mediaContainer .captionAlert {
+      font-family: _Josefin_Sans_;
+      font-size: 15px;
+      colo: red;
+      margin: 0; }
+    .windowPopupReport .mediaContainer .buttonsReport {
+      margin-top: 5px;
+      margin-left: 50px; }
+      .windowPopupReport .mediaContainer .buttonsReport input {
+        font-family: _Josefin_Sans_;
+        color: white;
+        width: 80px;
+        height: 40px;
+        background-color: rgba(60, 115, 180, 0.8);
+        float: right;
+        border: 2px solid rgba(60, 115, 160, 0.8);
+        border-radius: 5px; }
+        .windowPopupReport .mediaContainer .buttonsReport input:hover {
+          background-color: rgba(60, 115, 250, 0.8); }
+
+.windowPopupEdit {
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none; }
+  .windowPopupEdit .mediaContainer {
+    width: 500px;
+    height: 140px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 30%;
+    top: 25%;
+    overflow: auto;
+    z-index: 10; }
+    .windowPopupEdit .mediaContainer .buttonClose {
+      position: relative;
+      left: 475px;
+      width: 20px;
+      margin-top: 5px;
+      margin-bottom: -10px; }
+      .windowPopupEdit .mediaContainer .buttonClose .close {
+        background-color: white;
+        border-style: none;
+        font-weight: bold;
+        color: gray; }
+    .windowPopupEdit .mediaContainer textarea {
+      margin-top: 10px;
+      width: 100%;
+      height: 50px; }
+    .windowPopupEdit .mediaContainer .captionAlert {
+      font-family: _Josefin_Sans_;
+      font-size: 15px;
+      colo: red;
+      margin: 0; }
+    .windowPopupEdit .mediaContainer .buttonsEdit {
+      margin-top: 5px;
+      margin-left: 50px; }
+      .windowPopupEdit .mediaContainer .buttonsEdit input {
+        font-family: _Josefin_Sans_;
+        color: white;
+        width: 80px;
+        height: 40px;
+        background-color: rgba(60, 115, 180, 0.8);
+        float: right;
+        border: 2px solid rgba(60, 115, 160, 0.8);
+        border-radius: 5px; }
+        .windowPopupEdit .mediaContainer .buttonsEdit input:hover {
+          background-color: rgba(60, 115, 250, 0.8); }
+
+.windowPopupAdminBlock {
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none; }
+  .windowPopupAdminBlock .mediaContainer {
+    width: 500px;
+    height: 190px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 30%;
+    top: 25%;
+    overflow: auto;
+    z-index: 10; }
+    .windowPopupAdminBlock .mediaContainer .buttonClose {
+      position: relative;
+      left: 475px;
+      width: 20px;
+      margin-top: 5px;
+      margin-bottom: -10px; }
+      .windowPopupAdminBlock .mediaContainer .buttonClose .close {
+        background-color: white;
+        border-style: none;
+        font-weight: bold;
+        color: gray; }
+    .windowPopupAdminBlock .mediaContainer h1 {
+      font-family: _Josefin_Sans_;
+      font-size: 20px;
+      margin: 0; }
+    .windowPopupAdminBlock .mediaContainer textarea {
+      width: 100%;
+      height: 40px; }
+    .windowPopupAdminBlock .mediaContainer .time {
+      display: inline-flex; }
+      .windowPopupAdminBlock .mediaContainer .time h1 {
+        font-family: _Josefin_Sans_;
+        font-size: 15px;
+        margin: 0; }
+    .windowPopupAdminBlock .mediaContainer .blockButtons {
+      margin-top: 5px;
+      margin-left: 50px; }
+      .windowPopupAdminBlock .mediaContainer .blockButtons input {
+        font-family: _Josefin_Sans_;
+        color: white;
+        width: 80px;
+        height: 40px;
+        background-color: rgba(60, 115, 180, 0.8);
+        float: right;
+        border: 2px solid rgba(60, 115, 160, 0.8);
+        border-radius: 5px; }
+        .windowPopupAdminBlock .mediaContainer .blockButtons input:hover {
+          background-color: rgba(60, 115, 250, 0.8); }
+
+.notificationWindow {
+  width: 400px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  padding: 5px;
+  height: 70%;
+  overflow: auto;
+  position: fixed;
+  right: 115px;
+  top: 60px;
+  background-color: white;
+  border-radius: 5px;
+  display: none; }
+  .notificationWindow .mediaContainer {
+    display: inline-flex;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: gray;
+    width: 100%;
+    padding: 5px 0px 0px 0px; }
+    .notificationWindow .mediaContainer .imageNotificationContainer {
+      width: 55px;
+      height: 55px;
+      display: inline-block;
+      float: left;
+      overflow: hidden;
+      text-align: center;
+      background-color: #f3f3f3;
+      border: 2px solid #e3e3e3;
+      border-radius: 5px; }
+      .notificationWindow .mediaContainer .imageNotificationContainer img {
+        width: auto;
+        height: auto;
+        min-height: 100%;
+        max-height: 100%; }
+    .notificationWindow .mediaContainer .notificationText {
+      width: 100%;
+      display: inline-flex; }
+      .notificationWindow .mediaContainer .notificationText h1 {
+        font-family: _Josefin_Sans_;
+        font-size: 15px;
+        margin: 0; }
+
+.content {
+  margin-top: 100px; }
+  .content .settingsContainer {
+    width: 850px;
+    min-width: 600px;
+    height: auto;
+    float: left;
+    padding: 10px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    border: 2px solid #e3e3e3;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px; }
+    .content .settingsContainer .formSettings .text {
+      margin-top: 15px;
+      margin-bottom: 15px; }
+      .content .settingsContainer .formSettings .text input {
+        left: 60%;
+        width: 300px; }
+      .content .settingsContainer .formSettings .text div {
+        margin-top: 10px; }
+      .content .settingsContainer .formSettings .text .checkForPassword .checkForPassword {
+        left: 805px;
+        width: 13px; }
+      .content .settingsContainer .formSettings .text .setPrivacy div h1 {
+        display: inline-flex; }
+      .content .settingsContainer .formSettings .text .setPrivacy div input {
+        float: right;
+        margin-right: 183px; }
+    .content .settingsContainer .formSettings div h1 {
+      font-family: _Josefin_Sans_;
+      font-size: 15px;
+      margin: 0;
+      display: inline-flex; }
+    .content .settingsContainer .formSettings div .input {
+      float: right;
+      margin-right: 40px;
+      width: 300px; }
+    .content .settingsContainer .formSettings .saveSettings input {
+      font-family: _Josefin_Sans_;
+      margin-top: 75px;
+      width: 100%;
+      height: 40px;
+      background-color: #f93855;
+      background: rgba(206, 38, 63, 0.8);
+      border-radius: 5px;
+      border-color: #ce263f;
+      border-width: 1px;
+      color: white;
+      margin-bottom: 50px;
+      color: white;
+      font-weight: 700;
+      font-size: 20px; }
+    .content .settingsContainer .formSettings .upload .profile .buttonProfile::-webkit-file-upload-button {
+      background-size: 40px;
+      background-position: 5px;
+      background-color: #d75165;
+      height: 40px;
+      width: 50px;
+      border-width: 0;
+      border-radius: 5px;
+      margin-left: 180px; }
+    .content .settingsContainer .formSettings .upload .cover .buttonCover::-webkit-file-upload-button {
+      background-size: 40px;
+      background-color: #8cbbb1;
+      height: 40px;
+      width: 50px;
+      border-width: 0;
+      border-radius: 5px;
+      margin-left: 162px; }
+    .content .settingsContainer .formSettings .checkboxPassword input {
+      float: right;
+      margin-right: 183px; }
+
+.content .pageContainer {
+  text-align: center; }
+  .content .pageContainer .searchedText {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+    .content .pageContainer .searchedText h1 {
+      font-family: _Josefin_Sans_;
+      font-size: 20px;
+      margin: 0; }
+  .content .pageContainer .results {
+    width: 100%;
+    text-align: center; }
+    .content .pageContainer .results .resultContainer {
+      margin-bottom: 10px;
+      background-color: white;
+      border: 2px solid #e3e3e3;
+      border-radius: 5px;
+      padding: 5px;
+      width: 50%;
+      margin-left: 0;
+      margin-right: 0;
+      float: none;
+      display: inline-block; }
+      .content .pageContainer .results .resultContainer .userLink {
+        text-decoration: none;
+        color: #333333; }
+        .content .pageContainer .results .resultContainer .userLink .userContainer {
+          display: inline-flex;
+          width: 100%;
+          margin-top: 30px; }
+          .content .pageContainer .results .resultContainer .userLink .userContainer .imageUser {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border: 2px solid white;
+            border-radius: 50%; }
+            .content .pageContainer .results .resultContainer .userLink .userContainer .imageUser img {
+              width: auto;
+              height: auto;
+              max-width: 100%; }
+          .content .pageContainer .results .resultContainer .userLink .userContainer .username {
+            margin-top: 20px;
+            margin-left: 20px; }
+            .content .pageContainer .results .resultContainer .userLink .userContainer .username h1 {
+              font-family: _Josefin_Sans_;
+              font-size: 20px;
+              margin: 0; }
+      .content .pageContainer .results .resultContainer .buttons .followButtonContainer .followButton {
+        display: none;
+        font-family: _Josefin_Sans_;
+        color: white;
+        width: 80px;
+        height: 40px;
+        background-color: rgba(60, 115, 180, 0.8);
+        float: right;
+        border: 2px solid rgba(60, 115, 160, 0.8);
+        border-radius: 5px; }
+        .content .pageContainer .results .resultContainer .buttons .followButtonContainer .followButton:hover {
+          background-color: rgba(60, 115, 250, 0.8); }
+      .content .pageContainer .results .resultContainer .buttons .unfollowButtonContainer .unfollowButton {
+        display: none;
+        font-family: _Josefin_Sans_;
+        color: white;
+        width: 80px;
+        height: 40px;
+        background-color: rgba(206, 38, 63, 0.8);
+        float: right;
+        border: 1px solid black;
+        border-radius: 5px; }
+        .content .pageContainer .results .resultContainer .buttons .unfollowButtonContainer .unfollowButton:hover {
+          background-color: rgba(250, 38, 63, 0.8); }
 
 /*# sourceMappingURL=_main.css.map */

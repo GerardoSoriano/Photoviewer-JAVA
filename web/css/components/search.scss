@@ -1,0 +1,95 @@
+.content{
+    .pageContainer{
+        text-align: center;
+        .searchedText{
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+            h1{
+            font-family: _Josefin_Sans_;
+            font-size: 20px;
+            margin: 0;      
+            }
+        }
+        .results{
+            width: 100%;
+            text-align: center;
+            .resultContainer{
+            margin-bottom: 10px;                
+            background-color: white;
+            border: 2px solid #e3e3e3;
+            border-radius: 5px;
+            padding: 5px;
+            width: 50%;
+            margin-left: 0;
+            margin-right: 0;
+            float: none;
+            display: inline-block;
+                .userLink{
+                    text-decoration: none;
+	                color: #333333;
+                    .userContainer{
+                        display: inline-flex;
+                        width: 100%;
+                        margin-top: 30px;
+                        .imageUser{
+                            width: 100px;
+                            height: 100px;
+                            overflow: hidden;
+                            border: 2px solid white;
+                            border-radius: 50%;
+                            img{
+                                width: auto;
+                                height: auto;
+                                max-width: 100%;
+                            }
+                        }
+                        .username{
+                            margin-top: 20px;
+                            margin-left: 20px;
+                            h1{
+                            font-family: _Josefin_Sans_;
+                            font-size: 20px;
+                            margin: 0;    
+                            }
+                        }
+                    }
+                }
+                .buttons{
+                    .followButtonContainer{
+                        .followButton{
+                            display: none;
+                            font-family: _Josefin_Sans_;
+                            color: white;
+                            width: 80px;
+                            height: 40px;
+                            background-color: rgba(60, 115, 180, 0.8);
+                            float: right;
+                            border: 2px solid rgba(60, 115, 160, 0.8);
+                            border-radius: 5px;
+                            &:hover{
+                            background-color: rgba(60, 115, 250, 0.8);
+                            }
+                        }
+                    }
+                    .unfollowButtonContainer{
+                        .unfollowButton{
+                            display: none;
+                            font-family: _Josefin_Sans_;
+                            color: white;
+                            width: 80px;
+                            height: 40px;
+                            background-color: rgba(206, 38, 63, 0.8);
+                            float: right;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            &:hover{
+                            background-color: rgba(250,38,63,.8);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

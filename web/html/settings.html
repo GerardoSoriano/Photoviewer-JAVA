@@ -3,136 +3,130 @@
 <head>
 	<title> Configuracion de Photoviewer</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../css/settings_style.css">
-	<link rel="stylesheet" type="text/css" href="../css/notification.css">
-	<script type="text/javascript" src="../js/jquery.js"></script>
-	
-	<script type="text/javascript" src="../js/settings.js"></script>
-	<script type="text/javascript" src="../js/notification.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/components/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main/_main.css">
 
-	<script type="text/javascript" src="../js/right_column_script.js"></script>
+	<script src="../js/components/jquery.js" charset="utf-8"></script>
+    <script src="../js/components/login.js" charset="utf-8"></script>
+    <script src="../js/components/header.js" charset="utf-8"></script>
 
 </head>
 <body>
-
-		<div class="headContainer">
-			<div class="cont">
-				<div id="logo"><img src="../images/Logo_prov.png" height="50" width="50"></div>
-				<div id="pageTitle"><h2 id="titl">Photoviewer</h2></div>
-			</div>
-		</div>
-	<!--					HEADER					-->
-	<!--
-		<div class="headContainer">
-			<div class="cont">
-				<div id="logo"><img src="../images/Logo_prov.png" height="50" width="50"></div>
-				<div id="pageTitle"><h2 id="titl">Photoviewer</h2></div>
-			</div>
-		</div>
-	-->
-	<!--					HEADER					-->
-		<div class="containerContent">
-		<div class="cardUser">
 					<!--Aqui ira el link hacia el perfil del man-->
-					<a class="coverProfileCard" href=""></a>
-					<div class="cardUserInformation">
-						<a href= "https://www.google.com" class="avatarContainerCard">
-							<img src="../images/ppmini_ejemplo.jpg" class="avatar">	
-						</a>
-						<div class="cardUserFields">
-							<div class="cardUserfullname">
-								<a class="cardText" href=""> Roberto Villegas Rodriguez </a>
-							</div>
-							<div class="cardUsername">
-								<a class="cardText" href=""> RV_user </a>
-							</div>
-						</div>
-					</div>
-				</div>
+	<div class="content">					
+	  <div class="leftContent">
+        <div class="userProfile">
+          <div class="mediaContainer">
+            <div class="imageCover">
+              <img src="../images/cover.jpg" alt="">
+            </div>
+            <div class="imageProfile">
+              <img src="../images/profile.jpg" alt="">
+            </div>
+            <div class="text">
+              <div class="fullname">
+                <h1>Gerardo Soriano</h1>
+              </div>
+              <div class="username">
+                <h1>gerardosoriano97</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<div class="container">
-                            <form action="/Ultimate_Photoviewer/UpdateUserServlet" method="POST" enctype="multipart/form-data">
-				<div class="text">
-					Nombre							<input type="text" name="name">
-				</div>
-				<hr>
-				<div class="text">
-					Usuario							<input type="text" name="user">
-				</div>
-				<hr>
-				<div class="text">
-					<div>
-					Contaseña actual				<input type="text" name="actualpass">
-					</div>
-					<div>
-					<input type="checkbox" name="change_password" id="check_for_password"> ¿Deseas cambiar tu contraseña?
-					</div>
-					<div>
-					Contaseña nueva					<input type="text" name="newpass">
-					</div>
-					<div>
-					Confirmar nueva contraseña		<input type="text" name="confirmpass">
-					</div>
-				</div>
-				<hr>
-				<div class="upload">
-					<input type="file" class="btn_settings" id="upload_pp" title="" name="imgPortada">
-					<input type="file" class="btn_settings" id="upload_cp" title="" name="imgProfile">								
-				</div>
-				<hr>
-				<div class="text">
-				<div>
-					Pregunta de Seguridad			<select>
-													  <option value="default">Selecciona...</option>
-													  <option value="pet">¿El nombre de tu primer mascota?</option>
-													  <option value="teacher">¿El nombre de tu maestra de la escuela?</option>
-													  <option value="grandma">¿El nombre de tu abuela?</option>
-													  <option value="hospital">¿El nombre del Hospital en el que naciste?</option>
-													</select>
-					</div>
-				<div>
-					Respuesta <input type="text" name="answer">
-				</div>
-				</div>
-				<hr>
-				<div class="text">
-					Cambiar configuracion de privacidad
-					<div>
-						<input type="radio" name="gender" value="global"> Publico <br>
-	  					<input type="radio" name="gender" value="private"> Privado<br>
-	  					<input type="radio" name="gender" value="onlyme"> Solo yo
-					</div>
-				</div>
-				<div class="button">
-						<span>
-                                                    <input type="submit" class="saveChanges" value="Guardar cambios">
-						</span>
-					</div>
-				</form>
-			
-				</div>
+	  <div class="settingsContainer">
+		<form class="formSettings" action="" method="post">
+		  <div class="text">
+			<h1>Nombre</h1>
+			<input type="text" name="name" class="input">
+		  </div>
+		  <hr>
+		  <div class="text">
+			<h1>Usuario</h1>
+			<input type="text" name="user" class="input">
+		  </div>
+		  <hr>
+		  <div class="text">
+		  	<!--div>
+			  <h1>Contaseña actual</h1>
+			  <input type="text" name="actualass">
+			</div-->
+			<div class="checkboxPassword">
+			  <h1>¿Deseas cambiar tu contraseña?</h1>
+			  <input type="checkbox" name="change_password" class="checkForPassword"> 
+			</div>
+			<div class="newPassword">
+			  <h1>Contaseña nueva</h1>
+			  <input type="text" name="newPassword" class="input">
+			</div>
+			<div class="confirmPassword">
+			  <h1>Confirmar nueva contraseña</h1>
+			  <input type="text" name="confirmPassword" class="input">
+			</div>
+		  </div>
+		  <hr>
+		  <div class="upload">
+		    <div class="profile">
+		      <h1>Perfil</h1>
+			  <input type="file" class="buttonProfile" name="uploadProfileImage">
+		    </div>
+		    <div class="cover">
+		      <h1>Portada</h1>
+			  <input type="file" class="buttonCover" name="uploadCoverImage">								
+   		    </div>
+		  </div>
+		  <hr>
+		  <div class="text">
+			<div class="comboSecurity">
+			  <h1>Pregunta de Seguridad</h1>
+			  	<select class="input">
+				  <option value="default">Selecciona...</option>
+				  <option value="pet">¿El nombre de tu primer mascota?</option>
+				  <option value="teacher">¿El nombre de tu maestra de la escuela?</option>
+				  <option value="grandma">¿El nombre de tu abuela?</option>
+				  <option value="hospital">¿El nombre del Hospital en el que naciste?</option>
+			  	</select>
+			</div>
+			<div class="answerSecurity">
+			  <h1>Respuesta</h1>
+			  <input type="text" name="answer" class="input">
+			</div>
+		  </div>
+		  <hr>
+		  <div class="text">
+			<h1>Cambiar configuracion de privacidad</h1>
+			<div class="setPrivacy">
+			  <div>
+			  	<h1>Publico</h1>
 
-			<!-- 							BUTTONS 							-->
-			<div class="right_column"></div>
-				<div class="floatinButtons">
-					<div class="mainButtons">
-					<button class="btn_menus" id="notification_button"><img src="../images/notification.png" height="40"></button><br>
-					<button class="btn_menus" id="search_button"><img src="../images/search.png" height="40"></button><div class="search_text"><input type="search" name=""></div><br>
-					<button class="btn_menus" id="to_user_button"><img src="../images/user.png" height="40"></button><br>
-					<button class="btn_menus" id="config_button"><img src="../images/config.png" height="40"></button><br>
-				</div>	
-			
-		</div>
-		<div class="notification_window">
-		<div class="notification_container">
-			<div class="image_container">
-				<img class="image_notification" src="../images/ppmini_ejemplo.jpg">
+			    <input type="radio" name="privacy" value="global" checked="checked">
+			  </div>
+			  <div>
+			  	<h1>Privado</h1>
+	  		  	<input type="radio" name="privacy" value="private">
+	  		  </div>
 			</div>
-			<div class="text_notification">
-				<span class="user_notification_generator">A Roberto Villegas</span><span class="notification_desc"> le gusta tu foto.</span>
-			</div>
-		</div>	
+		  </div>
+		  <div class="saveSettings">
+			  <input type="submit" value="Guardar Cambios" class="saveChanges">
+		  </div>
+		</form>			
+	  </div>
 	</div>
-			<!-- 							BUTTONS 							-->
+	<!-- 							BUTTONS 							-->
+	<div class="rightBar">
+      <div class="mediaContainer">
+        <div class="icons">
+          <ul>
+            <li><span class="fa fa-globe"></span></li>
+            <li><span class="fa fa-search"></span></li>
+            <li><span class="fa fa-user"></span></li>
+            <li><span class="fa fa-cog"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
 </body>
 </html>

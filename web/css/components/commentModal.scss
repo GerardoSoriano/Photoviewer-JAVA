@@ -1,0 +1,147 @@
+.windowPopup{
+  @extend .default_values;
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  background-color: rgba(0,0,0,.5);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+    .mediaContainer{
+      width: 500px;
+	  height: 400px;
+      padding: 5px;
+	  background-color: white;
+	  border-radius: 5px;
+	  position: absolute;
+	  margin-left: 30%;
+	  top:25%;
+	  overflow: auto;
+	  z-index: 10;
+         .buttonClose{
+           position: relative;
+	       left:475px;
+	       width: 20px;
+	       margin-top: 5px;
+	       margin-bottom: -10px;
+            .close{
+             background-color: white;
+		     border-style: none;
+		     font-weight: bold;
+		     color: gray;
+            }
+        }
+        .icons{
+            display: inline-flex;
+	        width: 100%;
+	        padding-bottom: 10px;
+            font-size: 8px;
+            .likes{
+                display: inline-flex;
+                h1{
+                    margin: 0;
+                }
+                span{
+                    width: 18px;
+                    height: 18px;
+                    font-size: 18px;
+                    margin-left: 20px;
+                }
+            }
+            .comments{
+                display: inline-flex;
+                h1{
+                    margin: 0;
+                }
+                span{
+                    width: 18px;
+                    height: 18px;
+                    font-size: 18px;
+                    margin-left: 20px;
+                }
+            }
+            .shares{
+                display: inline-flex;
+                h1{
+                    margin: 0;
+                }
+                span{
+                    width: 18px;
+                    height: 18px;
+                    font-size: 18px;
+                    margin-left: 20px;
+                }
+            }
+	    }
+        .user{
+            width: auto;
+            .addComment{
+            display: inline-flex;
+            .imageProfile{
+              width: 75px;
+              height: 75px;
+              overflow: hidden;
+              border: 2px solid white;
+              border-radius: 50%;
+              img{
+                width: auto;
+                height: auto;
+                max-width: 100%;
+                margin: 0;
+                }
+              }
+             .username{
+               width: auto;
+               h1{
+                font-family: _Josefin_Sans_;
+                font-size: 15px;
+                colo: red;
+                margin: 0;
+               }
+               textarea{
+			     width: 100%;			
+			     overflow: none;
+		       }
+                 
+        }
+        }
+        }
+            .comment{
+                
+            }.imageProfileComment{
+              width: 55px;
+              height: 55px;
+              display: inline-block;
+              float: left;
+              overflow: hidden;
+              text-align: center;
+              background-color: #f3f3f3;
+              border: 2px solid #e3e3e3;
+              border-radius: 5px;
+              img{
+                width: auto;
+                height: auto;
+                min-height: 100%;
+                max-height: 100%;
+      }
+    }
+        .userComment{
+            width: auto;
+           .commentPoster, .commentCaption{
+               width: auto;
+               h1{
+                font-family: _Josefin_Sans_;
+                font-size: 12   px;
+                margin: 0;
+               }     
+               a{
+                font-family: _Josefin_Sans_;
+                font-size: 18px;
+                margin: 0;
+               }     
+        }
+  }
+}
+}
