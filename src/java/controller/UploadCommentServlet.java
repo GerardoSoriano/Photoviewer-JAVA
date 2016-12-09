@@ -5,12 +5,11 @@
  */
 package controller;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import static controller.LoadImagesServlet.convertToJSON;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -32,8 +31,8 @@ import photoviewer.model.User;
  *
  * @author Gerardo Soriano
  */
-@WebServlet(name = "LoadData", urlPatterns = {"/LoadData"})
-public class LoadImagesServlet extends HttpServlet {
+@WebServlet(name = "UploadCommentServlet", urlPatterns = {"/UploadCommentServlet"})
+public class UploadCommentServlet extends HttpServlet {
 
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -46,6 +45,8 @@ public class LoadImagesServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String comment = request.getParameter("comment");
+        int idPost = Integer.parseInt(request.getParameter("idPost"));
         
         HttpSession session = request.getSession();
         User user = UserMethods.getUser(session.getAttribute("email").toString());
@@ -57,20 +58,16 @@ public class LoadImagesServlet extends HttpServlet {
         JsonArray out = null;
         JsonObject json = null;
             try{
-                String query = "call sp_pv_selectPostsByUser(?)";
+                String query = "call sp_pv_insertComment(?,?,?)";
                 cs = con.prepareCall(query);
                 cs.setInt(1, user.getId());
-                rs = cs.executeQuery();
-                try {
-                    out = convertToJSON(rs);
-                    json.add("allPost",out);
-                } catch (Exception ex) {
-                    Logger.getLogger(LoadImagesServlet.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                cs.setInt(2, idPost);
+                cs.setString(3, comment);
+                cs.executeQuery();
                 
-                response.setContentType("application/json");  
+                response.setContentType("text/plain");  
                 response.setCharacterEncoding("UTF-8");
-                response.getWriter().write(out.toString()); 
+                response.getWriter().write("success"); 
         
                 
             }catch(SQLException e){
@@ -80,22 +77,6 @@ public class LoadImagesServlet extends HttpServlet {
                 c.cerrarConexion();
             }
         
+        
     }
-    
-    public static JsonArray convertToJSON(ResultSet resultSet)
-            throws Exception {
-        JsonArray jsonArray = new JsonArray();
-        while (resultSet.next()) {
-            int total_rows = resultSet.getMetaData().getColumnCount();
-            JsonObject obj = new JsonObject();
-            for (int i = 0; i < total_rows; i++) {
-                obj.addProperty(
-                        resultSet.getMetaData().getColumnLabel(i + 1).toLowerCase(), 
-                        resultSet.getString(i + 1));
-            }
-            jsonArray.add(obj);
-        }
-        return jsonArray;
-    }
-
 }

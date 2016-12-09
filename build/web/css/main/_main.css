@@ -372,8 +372,7 @@ input.error {
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
-  z-index: 1;
-  display: none; }
+  z-index: 1; }
   .windowPopup .mediaContainer {
     width: 500px;
     height: 400px;
@@ -448,7 +447,7 @@ input.error {
           .windowPopup .mediaContainer .user .addComment .username h1 {
             font-family: _Josefin_Sans_;
             font-size: 15px;
-            colo: red;
+            color: red;
             margin: 0; }
           .windowPopup .mediaContainer .user .addComment .username textarea {
             width: 100%;

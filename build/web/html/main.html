@@ -11,6 +11,7 @@
     <script src="../js/components/uploadButton.js" charset="utf-8"></script>
     <script src="../js/components/uploadPost.js" charset="utf-8"></script>
     <script src="../js/components/loadData.js" charset="utf-8"></script>
+    <script src="../js/components/loadComments.js" charset="utf-8"></script>
   </head>
   <body>
     <div class="header">
@@ -23,7 +24,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="content">
       <div class="leftContent">
         <div class="userProfile">
@@ -68,7 +69,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="rightbarContainer">
       <div class="rightBar">
         <div class="mediaContainer">
@@ -93,61 +94,9 @@
 		  <h1 class="username">Roberto Villegas</h1>
 		  <h1> le gusta tu foto.</h1>
 		</div>
-	  </div>	
-	</div>
-<!--//////////////////////////////////////////////////////////////////////////////////////-->
-    <div class="windowPopup">
-	  <div class="mediaContainer">
-		  <div class="head">
-			<div class="buttonClose">
-			  <button class="close">x</button>
-			</div>
-			<div class="icons">
-			  <div class="likes">
-				<span class="fa fa-heart"></span>
-				<h1 class="amountOfLikes">10</h1>
-			  </div>
-			  <div class="comments">
-				<span class="fa fa-comments"></span>
-				<h1 class="amountOfComments">10</h1>
-				<h1>Comentarios</h1>
-			  </div>
-			  <div class="shares">
-				<span class="fa fa-share-alt"></span>
-				<h1 class="amountOfShares">10</h1>
-				<h1>veces compartido</h1>
-			  </div>
-			</div>
-		  </div>
-		  <div class="user">
-			<div class="addComment">
-			  <div class="imageProfile">
-				<img src="../images/profile.jpg" alt>
-			  </div>
-			  <div class="username">
-				<h1>gerardosoriano97</h1>
-				<br>
-				<textarea name="textComment" class="textareaComment" rows="5" maxlength="255" placeholder="Escribe un comentario"></textarea>
-			  </div>
-			</div>
-		  </div>				
-		  <div class="comment">
-			<div class="imageProfileComment">
-			  <img src="../images/profile.jpg" alt>
-			</div>
-			<div class="userComment">
-			  <div class="commentPoster">
-				<a href="" class="comment_user">Roberto Villegas Rodriguez</a>
-			  </div>
-			  <div class="commentCaption">
-				<h1>
-				  HOLO ESTO ES UN COMENTARIO! VERE QUE PUEDO HACER PARA QUE SE MUESTRE TODO SIN EXCEDERSE
-				</h1>
-			  </div>
-			</div>
-		 </div>
 	  </div>
 	</div>
+<!--//////////////////////////////////////////////////////////////////////////////////////-->
 
 	<div class="windowPopupDelete">
 	  <div class="mediaContainer">
@@ -157,7 +106,7 @@
 	    <h1 class="captionAlert"> ¿Estas seguro que deseas eliminar esta publicacion? </h1>
 	    <div class="buttonsDelete">
 	      <input type="button" name="cancelDelete" value="Cancelar">
-	      <input type="button" name="okDelete" value="Aceptar">		  
+	      <input type="button" name="okDelete" value="Aceptar">
 	    </div>
 	  </div>
 	</div>
@@ -170,7 +119,7 @@
 	    <h1 class="captionAlert"> ¿Estas seguro que deseas reportar esta publicacion? </h1>
 	    <div class="buttonsReport">
 	      <input type="button" name="cancelReport" value="Cancelar">
-	      <input type="button" name="okReport" value="Aceptar">		  
+	      <input type="button" name="okReport" value="Aceptar">
 	    </div>
 	  </div>
 	</div>
@@ -183,7 +132,7 @@
 		<textarea></textarea>
 		<div class="buttonsEdit">
 		  <input type="button" name="cancelEdition" value="Cancelar">
-	      <input type="button" name="okEdition" value="Aceptar">		  
+	      <input type="button" name="okEdition" value="Aceptar">
 		</div>
 	  </div>
 	</div>
@@ -192,7 +141,7 @@
 	  <div class="mediaContainer">
 		<div class="buttonClose">
 	  	  <button class="close">x</button>
-		</div>	
+		</div>
 		<h1>Razon de bloqueo</h1><br>
 		<textarea class="block_explain"></textarea>
 		<div class="time">
@@ -202,7 +151,7 @@
 		</div>
 		<div class="blockButtons">
 	  	  <input type="button" name="cancelBlock" value="Cancelar">
-      	  <input type="button" name="okBlock" value="Aceptar">		  
+      	  <input type="button" name="okBlock" value="Aceptar">
 		</div>
 	  </div>
 	</div>
