@@ -70,7 +70,10 @@ $(document).on("click",".fa-comments",function(){
     error:    function(msg){
       console.log("error" + msg);
     }
+  }).done(function(){
+    loadComments(idParent);
   });
+
 });
 
 $(document).on("keypress","textarea.textareaComment",function(e){
@@ -90,6 +93,7 @@ $(document).on("keypress","textarea.textareaComment",function(e){
       success:    function(msg){
         if (msg == "success") {
           $(oThis).val("");
+          loadComments(idParent);
         }
       },
       error:      function(msg){
@@ -102,3 +106,37 @@ $(document).on("keypress","textarea.textareaComment",function(e){
 $(document).on("click","button.close",function(){
   $("div.windowPopup").remove();
 });
+
+function loadComments(id){
+  $.ajax({
+    method:     "POST",
+    url:        "../LoadCommentsServlet",
+    data:       {
+        idPost  :  id
+    },
+    success:    function(msg){
+      $(".windowPopup > .mediaContainer > .comment").not(":nth-child(3)").remove();
+      $.each(msg,function(key,val){
+        $(".windowPopup > .mediaContainer").append(''+
+        '<div class="comment">' +
+          '<div class="imageProfileComment">' +
+            '<img src="../images/profile.jpg" alt>' +
+          '</div>' +
+          '<div class="userComment">' +
+            '<div class="commentPoster">' +
+              '<a href="" class="comment_user">Roberto Villegas Rodriguez</a>' +
+            '</div>' +
+            '<div class="commentCaption">' +
+              '<h1>' +
+                val.commentary +
+              '</h1>' +
+            '</div>' +
+          '</div>'
+        );
+      });
+    },
+    error:      function(msg){
+      alert("no jalo");
+    }
+  });
+}

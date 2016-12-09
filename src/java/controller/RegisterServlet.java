@@ -82,7 +82,11 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("pass");
         
-        User user = new User(fullname, username, email, password, null, null, true, null, null, null, null, true);
+        User user = new User();
+        user.setFullname(fullname);
+        user.setUsername(username);
+        user.setEmail(email);
+        user.setPass(password);
         UserMethods.insertar(user);
         
         response.setContentType("text/plain");  // Set content type of the response so that jQuery knows what it can expect.

@@ -43,17 +43,16 @@ public class UpdateUserServlet extends HttpServlet {
         HttpSession session = request.getSession(false);
         String fullname = request.getParameter("name");
         String user = request.getParameter("user");
-        String actualPass = request.getParameter("actualpass");
-        String Pass = request.getParameter("newpass");
-        Part imgCover = request.getPart("imgPortada");
-        Part imgProfile = request.getPart("imgProfile");
+        String Pass = request.getParameter("newPassword");
+        Part imgCover = request.getPart("uploadCoverImage");
+        Part imgProfile = request.getPart("uploadProfileImage");
         
         InputStream imgC = null;
         InputStream imgP = null;
         imgC = imgCover.getInputStream();
         imgP= imgProfile.getInputStream();
-        
-        UserMethods.updateUser(1, fullname, user, session.getAttribute("email").toString(), actualPass, "", imgC, imgP);
+            
+        UserMethods.updateUser(1, fullname, user, session.getAttribute("email").toString(), Pass, "", imgC, imgP);
       
     }
 

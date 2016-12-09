@@ -9,19 +9,18 @@
 	<script src="../js/components/jquery.js" charset="utf-8"></script>
     <script src="../js/components/login.js" charset="utf-8"></script>
     <script src="../js/components/header.js" charset="utf-8"></script>
+		<script src="../js/components/cardUser.js" charset="utf-8"></script>
 
 </head>
 <body>
 					<!--Aqui ira el link hacia el perfil del man-->
-	<div class="content">					
+	<div class="content">
 	  <div class="leftContent">
         <div class="userProfile">
           <div class="mediaContainer">
             <div class="imageCover">
-              <img src="../images/cover.jpg" alt="">
             </div>
             <div class="imageProfile">
-              <img src="../images/profile.jpg" alt="">
             </div>
             <div class="text">
               <div class="fullname">
@@ -36,7 +35,7 @@
       </div>
 
 	  <div class="settingsContainer">
-		<form class="formSettings" action="" method="post">
+		<form class="formSettings" action="../UpdateUserServlet" method="post" enctype="multipart/form-data">
 		  <div class="text">
 			<h1>Nombre</h1>
 			<input type="text" name="name" class="input">
@@ -54,7 +53,7 @@
 			</div-->
 			<div class="checkboxPassword">
 			  <h1>¿Deseas cambiar tu contraseña?</h1>
-			  <input type="checkbox" name="change_password" class="checkForPassword"> 
+			  <input type="checkbox" name="change_password" class="checkForPassword">
 			</div>
 			<div class="newPassword">
 			  <h1>Contaseña nueva</h1>
@@ -73,7 +72,7 @@
 		    </div>
 		    <div class="cover">
 		      <h1>Portada</h1>
-			  <input type="file" class="buttonCover" name="uploadCoverImage">								
+			  <input type="file" class="buttonCover" name="uploadCoverImage">
    		    </div>
 		  </div>
 		  <hr>
@@ -111,7 +110,7 @@
 		  <div class="saveSettings">
 			  <input type="submit" value="Guardar Cambios" class="saveChanges">
 		  </div>
-		</form>			
+		</form>
 	  </div>
 	</div>
 	<!-- 							BUTTONS 							-->
@@ -139,7 +138,7 @@
 		  <h1 class="username">Roberto Villegas</h1>
 		  <h1> le gusta tu foto.</h1>
 		</div>
-	  </div>	
+	  </div>
 	</div>
 
 </body>
