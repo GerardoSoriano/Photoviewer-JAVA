@@ -5,6 +5,7 @@
  */
 package photoviewer.model;
 
+import java.sql.Blob;
 import java.sql.Date;
 
 /**
@@ -22,11 +23,14 @@ public class User {
     private boolean gender;
     private String country;
     private String city;
-    private String avatar;
-    private String cover;
-    private boolean privacity;
+    private Blob avatar;
+    private String mimeAvatar;
+    private Blob cover;
+    private String mimeCover;
+    private boolean privacy;
 
-    public User(String fullname, String username, String email, String pass, String description, Date birthday, boolean gender, String country, String city, String avatar, String cover, boolean privacity) {
+    public User(int id, String fullname, String username, String email, String pass, String description, Date birthday, boolean gender, String country, String city, Blob avatar, String mimeAvatar, Blob cover, String mimeCover, boolean privacy) {
+        this.id = id;
         this.fullname = fullname;
         this.username = username;
         this.email = email;
@@ -37,8 +41,34 @@ public class User {
         this.country = country;
         this.city = city;
         this.avatar = avatar;
+        this.mimeAvatar = mimeAvatar;
         this.cover = cover;
-        this.privacity = privacity;
+        this.mimeCover = mimeCover;
+        this.privacy = privacy;
+    }
+
+    public User(String fullname, String username, String email, String pass, String description, Date birthday, boolean gender, String country, String city, Blob avatar, String mimeAvatar, Blob cover, String mimeCover, boolean privacy) {
+        this.fullname = fullname;
+        this.username = username;
+        this.email = email;
+        this.pass = pass;
+        this.description = description;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.country = country;
+        this.city = city;
+        this.avatar = avatar;
+        this.mimeAvatar = mimeAvatar;
+        this.cover = cover;
+        this.mimeCover = mimeCover;
+        this.privacy = privacy;
+    }
+
+    public User() {
+    }
+
+    public User(String fullname, String username, String email, String password, Object object, Object object0, boolean b, Object object1, Object object2, Object object3, Object object4, boolean b0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public int getId() {
@@ -121,29 +151,43 @@ public class User {
         this.city = city;
     }
 
-    public String getAvatar() {
+    public Blob getAvatar() {
         return avatar;
     }
 
-    public void setAvatar(String avatar) {
+    public void setAvatar(Blob avatar) {
         this.avatar = avatar;
     }
 
-    public String getCover() {
+    public String getMimeAvatar() {
+        return mimeAvatar;
+    }
+
+    public void setMimeAvatar(String mimeAvatar) {
+        this.mimeAvatar = mimeAvatar;
+    }
+
+    public Blob getCover() {
         return cover;
     }
 
-    public void setCover(String cover) {
+    public void setCover(Blob cover) {
         this.cover = cover;
     }
 
-    public boolean isPrivacity() {
-        return privacity;
+    public String getMimeCover() {
+        return mimeCover;
     }
 
-    public void setPrivacity(boolean privacity) {
-        this.privacity = privacity;
+    public void setMimeCover(String mimeCover) {
+        this.mimeCover = mimeCover;
     }
-    
-    
+
+    public boolean isPrivacy() {
+        return privacy;
+    }
+
+    public void setPrivacy(boolean privacy) {
+        this.privacy = privacy;
+    } 
 }

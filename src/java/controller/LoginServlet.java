@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import photoviewer.data.UserMethods;
+import static photoviewer.data.UserMethods.getUser;
+import photoviewer.model.User;
 
 /**
  *

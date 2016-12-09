@@ -9,6 +9,8 @@
     <script src="../js/components/login.js" charset="utf-8"></script>
     <script src="../js/components/header.js" charset="utf-8"></script>
     <script src="../js/components/uploadButton.js" charset="utf-8"></script>
+    <script src="../js/components/uploadPost.js" charset="utf-8"></script>
+    <script src="../js/components/loadData.js" charset="utf-8"></script>
   </head>
   <body>
     <div class="header">
@@ -48,7 +50,7 @@
               <input type="button" name="UploadPhoto" value="Subir foto">
             </div>
             <div class="form">
-              <form action="index.html" method="post" enctype="multipart/form-data">
+              <form method="post" enctype="multipart/form-data" id="formUploadPhoto">
                 <fieldset>
                   <textarea name="description" class="contentUploaded" rows="5" maxlength="255" placeholder="Escribe una descripción"></textarea>
                   <label for="photo"><span class="fa fa-camera"></span></label>
@@ -63,75 +65,6 @@
       </div>
       <div class="rightContent">
         <div class="contentPictures">
-          <div class="imageCard">
-            <div class="mediaContainer">
-              <div class="user">
-                <div class="imageProfile">
-                  <img src="../images/profile.jpg" alt="">
-                </div>
-                <div class="username">
-                  <h1>gerardosoriano97</h1>
-                </div>
-              </div>
-              <div class="icons">
-                <ul>
-                  <li><span class="fa fa-heart"></span></li>
-                  <li><span class="fa fa-comments"></span></li>
-                  <li><span class="fa fa-share-alt"></span></li>
-                  <li><span class="fa fa-ellipsis-h"></span></li>
-                </ul>
-              </div>
-              <div class="image">
-                <img src="../images/post.jpg" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="imageCard">
-            <div class="mediaContainer">
-              <div class="user">
-                <div class="imageProfile">
-                  <img src="../images/profile.jpg" alt="">
-                </div>
-                <div class="username">
-                  <h1>gerardosoriano97</h1>
-                </div>
-              </div>
-              <div class="icons">
-                <ul>
-                  <li><span class="fa fa-heart"></span></li>
-                  <li><span class="fa fa-comments"></span></li>
-                  <li><span class="fa fa-share-alt"></span></li>
-                  <li><span class="fa fa-ellipsis-h"></span></li>
-                </ul>
-              </div>
-              <div class="image">
-                <img src="../images/post.jpg" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="imageCard">
-            <div class="mediaContainer">
-              <div class="user">
-                <div class="imageProfile">
-                  <img src="../images/profile.jpg" alt="">
-                </div>
-                <div class="username">
-                  <h1>gerardosoriano97</h1>
-                </div>
-              </div>
-              <div class="icons">
-                <ul>
-                  <li><span class="fa fa-heart"></span></li>
-                  <li><span class="fa fa-comments"></span></li>
-                  <li><span class="fa fa-share-alt"></span></li>
-                  <li><span class="fa fa-ellipsis-h"></span></li>
-                </ul>
-              </div>
-              <div class="image">
-                <img src="../images/post.jpg" alt="">
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

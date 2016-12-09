@@ -1,0 +1,112 @@
+.content{
+    margin-top: 100px;
+.settingsContainer{    
+    width: 850px;
+    min-width: 600px;
+    height: auto;
+    float: left;
+    padding: 10px;
+	background-color: #ffffff;
+    margin-top: 10px;
+    
+    border: 2px solid #e3e3e3;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    .formSettings{
+        .text{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        input{
+            left: 60%;
+            width: 300px;
+        }
+        div{
+        margin-top: 10px;
+        }
+        .checkForPassword{
+        .checkForPassword{
+            left: 805px;
+            width: 13px;
+            }
+      }
+           .setPrivacy{
+                div{
+                    h1{
+                    display: inline-flex;
+                    }
+                    input{
+                    float: right;
+                    margin-right: 183px;
+                    }
+                }
+            }
+}
+        div{
+            
+            h1{
+            font-family: _Josefin_Sans_;
+            font-size: 15px;
+            margin: 0;
+            display: inline-flex;
+            }
+            .input{
+                float: right;
+                margin-right: 40px;
+                width: 300px;
+            }
+        }
+              .saveSettings{
+                input{
+                font-family: _Josefin_Sans_;
+                margin-top: 75px;
+                width: 100%;
+                height: 40px;
+                background-color: #f93855;
+                background: rgba(206,38,63,.8);
+                border-radius: 5px;
+                border-color: #ce263f;
+                border-width: 1px;
+                color: white;
+                margin-bottom: 50px;
+                color: white;
+                font-weight: 700;
+                font-size: 20px;
+                }
+            }
+            .upload{
+                .profile{
+            .buttonProfile::-webkit-file-upload-button{
+            background-size:40px;
+            background-position: 5px;	
+            background-color: #d75165; 	
+            height: 40px;
+            width: 50px;
+            border-width: 0;
+            border-radius: 5px;
+            margin-left: 180px;
+            }
+            }
+                .cover{
+            .buttonCover::-webkit-file-upload-button{
+            background-size: 40px;
+            background-color: #8cbbb1;
+            
+            height: 40px;
+            width: 50px;
+            border-width: 0;
+            border-radius: 5px;
+                margin-left: 162px;
+            }
+                }
+        }
+        .checkboxPassword{
+            input{
+                float: right;
+                margin-right: 183px;
+            }
+        }
+}
+}
+}

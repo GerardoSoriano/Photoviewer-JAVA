@@ -26,7 +26,7 @@ $(document).ready(function (){
                     '</ul>' +
                   '</div>' +
                   '<div class="image">' +
-                    '<img src="../images/'+ val.post +'" alt="">' +
+                    '<img src="../images'+ val.post +'" alt="">' +
                   '</div>' +
                 '</div>' +
               '</div>'

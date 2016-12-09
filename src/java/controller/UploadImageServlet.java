@@ -11,6 +11,7 @@ import java.io.PrintWriter;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.SQLException;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -39,8 +40,8 @@ public class UploadImageServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        String savePath = "/images";
+
+        String savePath = request.getServletContext().getRealPath("/") + "images";
         File fileSaveDir=new File(savePath);
             if(!fileSaveDir.exists()){
                 fileSaveDir.mkdir();
@@ -48,10 +49,9 @@ public class UploadImageServlet extends HttpServlet {
 
         
         Part imagePart = request.getPart("photo");
-        String fileName=extractFileName(imagePart);
-        String filePath= savePath + File.separator + fileName ;
+        String fileName = extractFileName(imagePart);
         String fileLocalPath = File.separator + fileName;
-        imagePart.write(filePath);
+        imagePart.write(savePath + fileLocalPath);
         String description = request.getParameter("description");
         
         Conexion c=new Conexion();

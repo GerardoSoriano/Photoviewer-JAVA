@@ -41,6 +41,40 @@ public class UserMethods {
         }
   return 1;
  }
+ public static User getUser(String email){
+     User user = new User();
+     Conexion c = new Conexion();
+     Connection con=c.getConexion();
+     Statement st = null;
+     ResultSet rs = null;
+     String query = "Select * from pv_user where email='" + email + "';";
+     try {
+         st = con.createStatement();
+         rs = st.executeQuery(query);
+         rs.next();
+         user.setId(rs.getInt("idUser"));
+         user.setFullname(rs.getString("fullname"));
+         user.setUsername(rs.getString("username"));
+         user.setEmail(rs.getString("email"));
+         user.setPass(rs.getString("pass"));
+         user.setDescription(rs.getString("description"));
+         user.setBirthday(rs.getDate("birthday"));
+         user.setGender(rs.getBoolean("sex"));
+         user.setCountry(rs.getString("country"));
+         user.setCity(rs.getString("city"));
+         user.setAvatar(rs.getBlob("avatar"));
+         user.setMimeAvatar(rs.getString("mimeAvatar"));
+         user.setCover(rs.getBlob("cover"));
+         user.setMimeCover(rs.getString("mimeCover"));
+         user.setPrivacy(rs.getBoolean("private"));
+         
+     } catch (Exception e) {
+         e.printStackTrace();
+     }
+     
+     
+     return user;
+ }
  public static int userExist(String email, String pass){
     Conexion c = new Conexion();
     Connection con=c.getConexion();
